@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="/style.css">
+<body>
+
+<h1>Messenger</h1>
+
+<p>Logged in as <%= user.username %></p>
+
+<a href="/profile">Profile</a>
+
+<form action="/logout" method="POST">
+    <button>Logout</button>
+</form>
+
+<h2>Users</h2>
+
+<ul>
+
+<% users.forEach(otherUser => { %>
+
+    <li>
+        <%= otherUser.username %>
+
+        <a href="/messages/<%= otherUser.id %>">
+            Message
+        </a>
+    </li>
+
+<% }) %>
+
+</ul>
+
+</body>
+</html>

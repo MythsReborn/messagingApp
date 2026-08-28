@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="/style.css">
+<h1>Edit Profile</h1>
+
+<form action="/profile/edit" method="POST">
+
+    <input
+        type="text"
+        name="display_name"
+        value="<%= user.display_name || "" %>"
+        placeholder="Display name"
+    >
+
+    <textarea
+        name="bio"
+        placeholder="Bio"
+    ><%= user.bio || "" %></textarea>
+
+    <button type="submit">Save</button>
+
+</form>
+
+</body>
+</html>

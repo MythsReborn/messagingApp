@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="/style.css">
+<h1><%= user.display_name || user.username %></h1>
+
+<p>@<%= user.username %></p>
+
+<p><%= user.bio || "No bio yet." %></p>
+
+<a href="/profile/edit">Edit Profile</a>
+
+<br>
+
+<a href="/users">Users</a>
+
+</body>
+</html>
